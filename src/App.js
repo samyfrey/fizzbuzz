@@ -15,6 +15,10 @@ export default function App() {
     setCount(count + 1);
     // fizzBuzzHelper(count)
   };
+  const decrementCount = () => {
+    if (count > 1) setCount(count - 1);
+    // fizzBuzzHelper(count)
+  };
 
   return (
     <div className="App">
@@ -28,6 +32,7 @@ export default function App() {
           ? "Buzz"
           : count}
       </h1>
+      <button onClick={decrementCount}>-</button>
       <button onClick={incrementCount}>+</button>
     </div>
   );
